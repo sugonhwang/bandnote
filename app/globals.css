@@ -1,0 +1,10 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@import "../styles/notebook.css";
+@import "../styles/chat.css";
+
+body {
+  background-color: #e4e1d6;
+}

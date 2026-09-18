@@ -1,0 +1,19 @@
+/* 종이 노트 질감: 가로 줄무늬 + 왼쪽 빨간 여백선 */
+.notebook {
+  background-color: #f2efe4;
+  background-image: linear-gradient(
+      to right,
+      transparent 0,
+      transparent 30px,
+      rgba(206, 132, 120, 0.65) 30px,
+      rgba(206, 132, 120, 0.65) 32px,
+      transparent 32px
+    ),
+    repeating-linear-gradient(
+      to bottom,
+      transparent,
+      transparent 25px,
+      rgba(120, 113, 95, 0.14) 25px,
+      rgba(120, 113, 95, 0.14) 26px
+    );
+}

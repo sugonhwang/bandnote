@@ -1,0 +1,22 @@
+/* 데스크톱: 대화목록 + 대화창 2단 노출 / 모바일: mobileView 상태로 토글 */
+.chat-list,
+.chat-thread {
+  display: flex;
+  flex-direction: column;
+}
+
+.chat-back {
+  display: none;
+}
+
+@media (max-width: 768px) {
+  .chat-wrap[data-mobile="list"] .chat-thread {
+    display: none;
+  }
+  .chat-wrap[data-mobile="thread"] .chat-list {
+    display: none;
+  }
+  .chat-wrap[data-mobile="thread"] .chat-back {
+    display: flex;
+  }
+}
