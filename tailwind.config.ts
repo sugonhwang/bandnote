@@ -9,22 +9,26 @@ const config: Config = {
     extend: {
       colors: {
         paper: {
-          DEFAULT: "#F2EFE4",
-          bg: "#E4E1D6",
+          DEFAULT: "#2B2014",
+          bg: "#120D08",
         },
         ink: {
-          DEFAULT: "#3A362E",
-          muted: "#8B8577",
+          DEFAULT: "#EDE0C4",
+          muted: "#AB9873",
+        },
+        chrome: {
+          DEFAULT: "#EDE0C4",
+          muted: "#AB9873",
         },
         margin: {
-          DEFAULT: "#CE8478",
-          dark: "#93493E",
-          soft: "#F1DAD5",
+          DEFAULT: "#E3A542",
+          dark: "#F0C878",
+          soft: "#3D2C15",
         },
         secondary: {
-          DEFAULT: "#7FA6A6",
-          dark: "#3F6363",
-          soft: "#DCE8E6",
+          DEFAULT: "#8B3A3A",
+          dark: "#E0A79E",
+          soft: "#3A2020",
         },
       },
       fontFamily: {

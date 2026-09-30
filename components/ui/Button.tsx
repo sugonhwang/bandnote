@@ -11,7 +11,7 @@ export function PrimaryButton({
 }: ButtonProps) {
   return (
     <button
-      className={`rounded-lg bg-margin px-5 py-3 text-[15.5px] font-semibold text-white transition hover:opacity-90 ${className}`}
+      className={`rounded-lg bg-margin px-5 py-3 text-[15.5px] font-semibold text-[#241A0E] transition hover:opacity-90 ${className}`}
       {...props}
     >
       {children}

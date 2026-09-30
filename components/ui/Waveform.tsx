@@ -15,7 +15,7 @@ export function Waveform({ bars = 30, played = 0.35 }: WaveformProps) {
         <div
           key={i}
           className={`w-0.5 rounded-sm ${
-            i < bars * played ? "bg-secondary" : "bg-[#C9C2AE]"
+            i < bars * played ? "bg-secondary" : "bg-[#4A3A26]"
           }`}
           style={{ height: h }}
         />

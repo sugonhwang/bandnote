@@ -92,7 +92,7 @@ export default function BandServiceDemoPage() {
     <div className="min-h-screen bg-paper-bg px-4 py-6 sm:px-8">
       <div className="mx-auto max-w-[1080px]">
         <div className="mb-4 flex items-center gap-2">
-          <span className="text-xl font-bold text-ink">합주노트</span>
+          <span className="text-xl font-bold text-chrome">합주노트</span>
         </div>
 
         <TabNav tabs={TABS} activeId={tab} onChange={setTab} />

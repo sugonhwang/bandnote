@@ -22,13 +22,13 @@ export function RecruitDetail({
     <div>
       <button
         onClick={onBack}
-        className="mb-[18px] flex items-center gap-1 text-sm text-ink-muted"
+        className="mb-[18px] flex items-center gap-1 text-sm text-chrome-muted transition-colors hover:text-chrome"
       >
         <ChevronLeft size={16} /> 목록으로
       </button>
 
       <div className="flex flex-col gap-4 md:flex-row md:items-start">
-        <div className="notebook flex-[1.6] rounded-[10px] py-7 pl-12 pr-7 shadow-[0_1px_2px_rgba(58,54,46,0.06),0_8px_20px_rgba(58,54,46,0.08)]">
+        <div className="notebook flex-[1.6] rounded-[10px] py-7 pl-12 pr-7 shadow-[0_2px_4px_rgba(0,0,0,0.35),0_10px_32px_rgba(227,165,66,0.18)]">
           <div className="mb-4 flex gap-1.5">
             <Tag tone="secondary">{post.genre}</Tag>
             <Tag tone="margin">{post.wantedInstrument} 모집</Tag>
@@ -38,11 +38,11 @@ export function RecruitDetail({
             {post.bandName}, {post.wantedInstrument} 세션을 찾습니다
           </h2>
 
-          <p className="mb-5 text-[15px] leading-relaxed text-[#4C4738]">
+          <p className="mb-5 text-[15px] leading-relaxed text-[#CBBA98]">
             {fullDescription}
           </p>
 
-          <div className="flex gap-4 border-t border-black/10 pt-3.5 text-[13px] text-ink-muted">
+          <div className="flex gap-4 border-t border-white/10 pt-3.5 text-[13px] text-ink-muted">
             <span className="flex items-center gap-1">
               <MapPin size={13} /> {post.area}
             </span>
@@ -55,7 +55,7 @@ export function RecruitDetail({
         <div className="flex flex-1 flex-col gap-3.5 md:sticky md:top-5">
           <button
             onClick={onOpenBand}
-            className="notebook rounded-[10px] py-4 pl-10 pr-4 text-left shadow-[0_1px_2px_rgba(58,54,46,0.06),0_8px_20px_rgba(58,54,46,0.08)]"
+            className="notebook rounded-[10px] py-4 pl-10 pr-4 text-left shadow-[0_2px_4px_rgba(0,0,0,0.35),0_10px_32px_rgba(227,165,66,0.18)]"
           >
             <p className="mb-1.5 text-xs font-medium text-ink-muted">
               밴드 프로필

@@ -27,7 +27,7 @@ export function RecruitCard({
   return (
     <div
       onClick={() => onOpen(post)}
-      className="notebook cursor-pointer rounded-[10px] py-[18px] pl-11 pr-[18px] shadow-[0_1px_2px_rgba(58,54,46,0.06),0_8px_20px_rgba(58,54,46,0.08)]"
+      className="notebook cursor-pointer rounded-[10px] py-[18px] pl-11 pr-[18px] shadow-[0_2px_4px_rgba(0,0,0,0.35),0_10px_32px_rgba(227,165,66,0.18)]"
     >
       <div className="flex items-start justify-between">
         <div>
@@ -47,17 +47,17 @@ export function RecruitCard({
             onToggleLike(post.id);
           }}
           aria-label="관심 등록"
-          className={`p-1 ${liked ? "text-margin" : "text-[#B7B0A0]"}`}
+          className={`p-1 ${liked ? "text-secondary" : "text-[#8C7B5C]"}`}
         >
-          <Heart size={19} fill={liked ? "#CE8478" : "none"} />
+          <Heart size={19} fill={liked ? "#8B3A3A" : "none"} />
         </button>
       </div>
 
-      <p className="my-3 text-[13.5px] leading-relaxed text-[#5C5748]">
+      <p className="my-3 text-[13.5px] leading-relaxed text-[#C9B896]">
         {post.snippet}
       </p>
 
-      <div className="flex gap-3.5 border-t border-black/10 pt-2.5 text-xs text-ink-muted">
+      <div className="flex gap-3.5 border-t border-white/10 pt-2.5 text-xs text-ink-muted">
         <span className="flex items-center gap-1">
           <MapPin size={12} /> {post.area}
         </span>

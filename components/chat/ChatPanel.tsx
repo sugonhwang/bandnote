@@ -59,7 +59,7 @@ export function ChatPanel({
   return (
     <div data-mobile={mobileView} className="chat-wrap flex h-[560px] gap-4">
       <div className="chat-list w-[250px] shrink-0 overflow-y-auto md:w-[260px]">
-        <p className="mb-2.5 text-xs font-semibold text-ink-muted">대화</p>
+        <p className="mb-2.5 text-xs font-semibold text-chrome-muted">대화</p>
         <div className="flex flex-col gap-1.5">
           {threads.map((t) => {
             const last = t.messages[t.messages.length - 1]?.text ?? "";
@@ -68,17 +68,33 @@ export function ChatPanel({
               <div
                 key={t.id}
                 onClick={() => selectThread(t.id)}
-                className={`cursor-pointer rounded-lg border px-3 py-2.5 ${
-                  isActive ? "border-margin bg-paper" : "border-transparent"
+                className={`cursor-pointer rounded-lg border px-3 py-2.5 transition-colors ${
+                  isActive
+                    ? "border-margin bg-paper"
+                    : "border-transparent hover:bg-white/5"
                 }`}
               >
                 <div className="mb-0.5 flex justify-between">
-                  <span className="text-[13.5px] font-semibold text-ink">
+                  <span
+                    className={`text-[13.5px] font-semibold ${
+                      isActive ? "text-ink" : "text-chrome"
+                    }`}
+                  >
                     {t.bandName}
                   </span>
-                  <span className="text-[10.5px] text-ink-muted">{t.time}</span>
+                  <span
+                    className={`text-[10.5px] ${
+                      isActive ? "text-ink-muted" : "text-chrome-muted"
+                    }`}
+                  >
+                    {t.time}
+                  </span>
                 </div>
-                <div className="truncate text-[11.5px] text-ink-muted">
+                <div
+                  className={`truncate text-[11.5px] ${
+                    isActive ? "text-ink-muted" : "text-chrome-muted"
+                  }`}
+                >
                   {last}
                 </div>
               </div>
@@ -89,7 +105,7 @@ export function ChatPanel({
 
       <div className="chat-thread min-w-0 flex-1">
         <button
-          className="chat-back mb-2.5 items-center gap-1 text-[13px] text-ink-muted"
+          className="chat-back mb-2.5 items-center gap-1 text-[13px] text-chrome-muted"
           onClick={() => setMobileView("list")}
         >
           <ChevronLeft size={16} /> 대화 목록
@@ -100,10 +116,10 @@ export function ChatPanel({
             {active.bandName[0]}
           </div>
           <div>
-            <div className="text-[13.5px] font-semibold text-ink">
+            <div className="text-[13.5px] font-semibold text-chrome">
               {active.bandName}
             </div>
-            <div className="text-[11px] text-ink-muted">{active.tag}</div>
+            <div className="text-[11px] text-chrome-muted">{active.tag}</div>
           </div>
         </div>
 
@@ -118,7 +134,9 @@ export function ChatPanel({
             >
               <div
                 className={`max-w-[72%] rounded-xl px-3.5 py-2.5 text-[13.5px] leading-relaxed ${
-                  m.from === "me" ? "bg-margin text-white" : "bg-[#E4DFCF] text-ink"
+                  m.from === "me"
+                    ? "bg-margin text-[#241A0E]"
+                    : "bg-[#3A2C1C] text-ink"
                 }`}
               >
                 {m.text}
@@ -133,12 +151,12 @@ export function ChatPanel({
             onChange={(e) => setInput(e.target.value)}
             onKeyDown={(e) => e.key === "Enter" && send()}
             placeholder="메시지 보내기"
-            className="flex-1 rounded-lg border border-black/10 bg-paper px-3.5 py-2.5 text-[13.5px] text-ink outline-none"
+            className="flex-1 rounded-lg border border-white/10 bg-paper px-3.5 py-2.5 text-[13.5px] text-ink outline-none"
           />
           <button
             onClick={send}
             aria-label="전송"
-            className="flex h-[42px] w-[42px] shrink-0 items-center justify-center rounded-lg bg-margin text-white"
+            className="flex h-[42px] w-[42px] shrink-0 items-center justify-center rounded-lg bg-margin text-[#241A0E]"
           >
             <Send size={16} />
           </button>

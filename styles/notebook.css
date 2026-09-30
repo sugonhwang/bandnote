@@ -1,19 +1,19 @@
-/* 종이 노트 질감: 가로 줄무늬 + 왼쪽 빨간 여백선 */
+/* 어두운 가죽/원목 노트 질감: 가로 줄무늬 + 왼쪽 와인색 여백선 */
 .notebook {
-  background-color: #f2efe4;
+  background-color: #2b2014;
   background-image: linear-gradient(
       to right,
       transparent 0,
       transparent 30px,
-      rgba(206, 132, 120, 0.65) 30px,
-      rgba(206, 132, 120, 0.65) 32px,
+      rgba(196, 68, 52, 0.55) 30px,
+      rgba(196, 68, 52, 0.55) 32px,
       transparent 32px
     ),
     repeating-linear-gradient(
       to bottom,
       transparent,
       transparent 25px,
-      rgba(120, 113, 95, 0.14) 25px,
-      rgba(120, 113, 95, 0.14) 26px
+      rgba(227, 165, 66, 0.07) 25px,
+      rgba(227, 165, 66, 0.07) 26px
     );
 }

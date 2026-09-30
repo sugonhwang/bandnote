@@ -24,8 +24,8 @@ export function BandProfile({
   onPlaySong,
 }: BandProfileProps) {
   return (
-    <div className="notebook overflow-hidden rounded-[10px] shadow-[0_1px_2px_rgba(58,54,46,0.06),0_8px_20px_rgba(58,54,46,0.08)]">
-      <div className="border-b border-black/10 py-[30px] pl-12 pr-7">
+    <div className="notebook overflow-hidden rounded-[10px] shadow-[0_2px_4px_rgba(0,0,0,0.35),0_10px_32px_rgba(227,165,66,0.18)]">
+      <div className="border-b border-white/10 py-[30px] pl-12 pr-7">
         <Tag tone="secondary">{genre}</Tag>
         <h2 className="mb-2 mt-3 text-[33px] font-bold text-ink">{name}</h2>
         <p className="max-w-[480px] text-[14.5px] leading-relaxed text-ink-muted">
@@ -68,7 +68,7 @@ export function BandProfile({
               <div
                 key={s.id}
                 className={`flex items-center gap-3.5 py-3 ${
-                  i !== 0 ? "border-t border-black/10" : ""
+                  i !== 0 ? "border-t border-white/10" : ""
                 }`}
               >
                 <button
